@@ -6,8 +6,40 @@ GAMELOG_PARAMS = {
 	'SeasonType': "Regular Season",
 	'TeamID': "",
 }
-
 GAMELOG_URL = 'http://stats.nba.com/stats/teamgamelog?'
+
+TEAM_STATS_PARAMS = {
+	'Conference': '',
+	'DateFrom': '',
+	'DateTo': '',
+	'Division': '',
+	'GameScope': '',
+	'GameSegment': '',
+	'LastNGames': 0,
+	'LeagueID': "00",
+	'Location': '',
+	'MeasureType': "Advanced",
+	'Month': 0,
+	'OpponentTeamID': 0,
+	'Outcome': '',
+	'PORound': 0,
+	'PaceAdjust': "N",
+	'PerMode': "PerGame",
+	'Period': 0,
+	'PlayerExperience': '',
+	'PlayerPosition': '',
+	'PlusMinus': "N",
+	'Rank': "N",
+	'Season': "2018-19",
+	'SeasonSegment': '',
+	'SeasonType': "Regular Season",
+	'ShotClockRange': '',
+	'StarterBench': '',
+	'TeamID': 0,
+	'VsConference': '',
+	'VsDivision': '',
+}
+TEAM_STATS_URL = 'http://stats.nba.com/stats/leaguedashteamstats?'
 
 REQUEST_HEADERS = {
 	'Accept': 'application/json, text/plain, */*',

@@ -11,17 +11,26 @@ def _RequestUrl(url, parameters):
 	return pd.DataFrame(stats, columns=headers)
 
 def GetTeamGameLog(team, season, start_date=None, end_date=None):
-	parameters = dict(constants.GAMELOG_PARAMS)
+	"""Returns the games played for a team during |season|
+        in [|start_date|, |end_date|]. If no start and end dates
+        are given then the games from the entire season are
+        returned. The dates should be formatted as mm/dd/yyyy.
+        The season should be formatted as 'yyyy-yy'.
+
+        team: string
+        season: string, yyyy-yy
+        start_date: string, mm/dd/yyyy.
+        end_date: string, mm/dd/yyyy.
+        """
+        parameters = dict(constants.GAMELOG_PARAMS)
 	# TODO: error check for bad team names
 	parameters['TeamID'] = constants.TEAM_TO_ID_MAP[team]
-	# TODO: error chech for formatting
+	# TODO: error check for formatting
 	parameters['Season'] = season
 	if start_date:
-		pass
-		# TODO: set start_date
+		parameters['DateFrom'] = start_date
 	if end_date:
-		pass
-		# TODO: set end_date
+        parameters['DateTo'] = end_date
 	print(parameters)
 	return _RequestUrl(constants.GAMELOG_URL, parameters)
 
