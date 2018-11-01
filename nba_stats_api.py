@@ -34,6 +34,12 @@ def GetTeamGameLog(team, season, start_date=None, end_date=None):
 	print(parameters)
 	return _RequestUrl(constants.GAMELOG_URL, parameters)
 
+def GetTeamStats(team, season):
+        pass
+
+def GetLeaderboardStats():
+        pass
+
 if __name__ == "__main__":
 	pp.pprint(GetTeamGameLog('Boston Celtics', '2016-17'))
 

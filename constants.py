@@ -41,6 +41,16 @@ TEAM_STATS_PARAMS = {
 }
 TEAM_STATS_URL = 'http://stats.nba.com/stats/leaguedashteamstats?'
 
+LEADER_PARAMS = {
+    'LeagueID': '00'
+    'PerMode': 'PerGame'
+    'Scope': 'S'
+    'Season': '2018-19'
+    'SeasonType': 'Regular Season'
+    'StatCategory': 'PTS'
+}
+LEADER_STATS = 'https://stats.nba.com/stats/leagueLeaders?'
+
 REQUEST_HEADERS = {
 	'Accept': 'application/json, text/plain, */*',
 	'Accept-Encoding': 'gzip, deflate, br',
